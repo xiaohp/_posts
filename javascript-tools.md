@@ -78,6 +78,7 @@ var removeClassAll = function(className) {
 ```
 
 批量删除元素
+
 ```javascript
 var removeAll = function(selector) {
     var tags = document.querySelectorAll(selector)
@@ -93,5 +94,20 @@ var removeAll = function(selector) {
 ```javascript
 var find = function(element, selector) {
     return element.querySelector(selector)
+}
+```
+
+利用 typeof 来检查一个没有声明的变量，而不报错。
+
+```javascript
+// 错误的写法
+if (v) {
+  // ...
+}
+// ReferenceError: v is not defined
+
+// 正确的写法
+if (typeof v === "undefined") {
+  // ...
 }
 ```
