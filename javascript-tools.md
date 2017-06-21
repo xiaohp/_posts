@@ -31,6 +31,15 @@ if (typeof v === "undefined") {
   // ...
 }
 ```
+利用对象的属性来检查全局变量是否声明
+
+```javascript
+if ('a' in window) {
+  // 变量 a 声明过
+} else {
+  // 变量 a 未声明
+}
+```
 利用 setTimeout 实现异步
 
 ```javascript
