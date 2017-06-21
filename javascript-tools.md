@@ -132,3 +132,33 @@ a()
 // function 1
 // function 2
 ```
+
+利用 Object 的 key 不重复特性给数组去重
+
+```javascript
+var deduplication = function (list) {
+    var o ={}
+    for (let l of list) {
+        o[l] = 1
+    }
+    return Object.keys(o)
+}
+var a = [1, 2, 2, 5, 2, 1]
+
+deduplication(a)
+// [1, 2, 5]
+```
+
+利用 ES6 的 set 进行数组去重
+
+```javascript
+function unique (arr) {
+  return Array.from(new Set(arr))
+}
+```
+
+## 踩坑记录
+
+1. Array.prototype.includes() 在360浏览器中不兼容，查询后需要47以上版本的chrome才支持
+2. 通过代码添加的自定义 data 不会在开发者工具中显示
+3. jQuery 获取自定义 data, 如果是数字会自动转成 Number
