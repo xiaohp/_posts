@@ -111,3 +111,24 @@ if (typeof v === "undefined") {
   // ...
 }
 ```
+利用 setTimeout 实现异步
+
+```javascript
+var a = function () {
+    console.log('begin')
+    setTimeout(function () {
+        console.log('function 1')
+    }, 0)
+    setTimeout(function () {
+        console.log('function 2')
+    }, 0)
+    console.log('end')
+}
+
+a()
+
+// begin
+// end
+// function 1
+// function 2
+```
