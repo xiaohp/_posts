@@ -14,6 +14,13 @@ var e = function(selector) {
     return document.querySelector(selector)
 }
 ```
+查找 element 的所有子元素
+
+```javascript
+var find = function(element, selector) {
+    return element.querySelector(selector)
+}
+```
 
 添加 HTML 到指定元素后面
 
@@ -42,6 +49,20 @@ var bindAll = function(selector, eventName, callback) {
 }
 ```
 
+添加 class
+
+```javascript
+var addClass = function(element, className) {
+    element.classList.add(className)
+}
+```
+删除 class
+
+```javascript
+var removeClass = function(element, className) {
+    element.classList.remove(className)
+}
+```
 切换 class
 
 ```javascript
@@ -79,10 +100,36 @@ var removeAll = function(selector) {
 }
 ```
 
-查找 element 的所有子元素
-
+切换元素显示和隐藏
 ```javascript
-var find = function(element, selector) {
-    return element.querySelector(selector)
+var show = function(element) {
+    element.classList.add('hide')
+}
+var hide = function(element) {
+    element.classList.remove('hide')
+}
+```
+
+设置元素内容
+```javascript
+var setText = function(element, text) {
+    element.innerText = text
+}
+var setHtml = function(element, html) {
+    element.innerHtml = html
+}
+var setValue = function(element, value) {
+    element.value = value
+}
+```
+
+自定义属性操作
+```javascript
+// 获取自定义属性
+var getData = function(element, property) {
+    return element.dataset.property
+}
+var setData = function(element, property, value) {
+    element.dataset.property = value
 }
 ```
