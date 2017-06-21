@@ -1,6 +1,6 @@
 ---
 title: Javascript 常用函数封装
-date: 2017-01-16 14:10:29
+date: 2017-03-16 14:10:29
 categories: 杂物间
 toc: true
 tags:
