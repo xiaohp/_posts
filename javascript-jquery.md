@@ -21,7 +21,6 @@ document.querySelectorAll('selector')
 
 后代选择
 ```javascript
-// 后代选择
 // jQuery
 $el.find('li')
 
@@ -31,8 +30,6 @@ el.querySelectorAll('li')
 
 前后元素
 ```javascript
-
-// 前后元素
 // jQuery
 $el.prev()
 
@@ -109,7 +106,7 @@ el.classList.add(className)
 ```
 
 移除 class
-```
+```javascript
 // jQuery
 $el.removeClass(className)
 
@@ -126,7 +123,7 @@ $el.toggleClass(className)
 el.classList.toggle(className)
 ```
 
-判断是否拥有 class
+判断拥有 class
 ```javascript
 // jQuery
 $el.hasClass(className)
