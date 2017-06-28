@@ -1,10 +1,11 @@
 ---
 title: 原生 Javascript 与 jQuery API 对照
 date: 2017-04-20 14:10:29
-categories: 杂物间
+categories: 笔记本
 toc: true
 tags:
   - Javascript
+  - jQuery
 ---
 
 ## 选择器

@@ -1,10 +1,11 @@
 ---
 title: Javascript 实现 jQuery API
 date: 2017-02-20 14:10:29
-categories: 杂物间
+categories: 笔记本
 toc: true
 tags:
   - Javascript
+  - jQuery
 ---
 
 选择器封装，类似 jQuery 中的 $

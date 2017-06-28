@@ -1,7 +1,7 @@
 ---
 title: Javascript 常用函数封装
 date: 2017-03-16 14:10:29
-categories: 杂物间
+categories: 笔记本
 toc: true
 tags:
   - Javascript

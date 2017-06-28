@@ -1,7 +1,7 @@
 ---
 title: Hexo 工具箱
 date: 2017-01-05 23:05:29
-categories: 杂物间
+categories: 笔记本
 toc: true
 tags:
   - Hexo
