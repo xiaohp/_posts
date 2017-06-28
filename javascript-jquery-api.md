@@ -13,6 +13,9 @@ tags:
 var e = function(selector) {
     return document.querySelector(selector)
 }
+var es = function(selector) {
+    return document.querySelectorAll(selector)
+}
 ```
 查找 element 的所有子元素
 
@@ -131,5 +134,19 @@ var getData = function(element, property) {
 }
 var setData = function(element, property, value) {
     element.dataset.property = value
+}
+```
+AJAX
+```javascript
+var ajax = function(method, path, data, reseponseCallback) {
+    var r = new XMLHttpRequest()
+    r.open(method, path, true)
+    r.setRequestHeader('Content-Type', 'application/json')
+    r.onreadystatechange = function() {
+        if(r.readyState === 4) {
+            reseponseCallback(r)
+        }
+    }
+    r.send(data)
 }
 ```
