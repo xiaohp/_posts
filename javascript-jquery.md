@@ -321,3 +321,18 @@ $.each(array, (index, value) => {
 array.forEach((value, index) => {
 })
 ```
+
+等待 DOM 加载完执行操作
+```javascript
+// jQuery
+$(document).ready(function() {
+})
+
+// Native
+window.onload = function() {
+}
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    console.log("DOM fully loaded and parsed")
+  })
+```
