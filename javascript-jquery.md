@@ -17,7 +17,9 @@ $('selector')
 
 // Native
 document.querySelector('selector')
+
 document.querySelectorAll('selector')
+// return NodeList
 ```
 
 后代选择
@@ -141,7 +143,7 @@ el.classList.contains(className)
 $el.remove()
 
 // Native
-el.parentNode.removeChild(el)
+el.remove()
 ```
 
 获取 text
@@ -180,7 +182,7 @@ $el.html(htmlString)
 el.innerHTML = htmlString
 ```
 
-append 添加到末尾
+append 添加元素到末尾
 ```javascript
 // jQuery
 $el.append("<div id='container'>hello</div>")
@@ -192,7 +194,7 @@ el.insertAdjacentHTML('beforeend', '<div id="container">Hello World</div>')
 el.appendChild(newEl)
 ```
 
-prepend 添加到开头
+prepend 添加元素到开头
 ```javascript
 // jQuery
 $el.prepend("<div id='container'>hello</div>")
@@ -259,6 +261,16 @@ $el.off(eventName, eventHandler)
 el.removeEventListener(eventName, eventHandler)
 ```
 
+触发事件
+```javascript
+// jQuery
+$el.trigger(eventName)
+
+// Native
+var event = new Event(eventName)
+el.dispatchEvent(event)
+```
+
 ## 工具
 
 isArray 判断数组
@@ -291,7 +303,7 @@ $.extend({}, defaultOpts, opts)
 Object.assign({}, defaultOpts, opts)
 ```
 
-trim 去除字符串收尾空白
+trim 去除字符串首尾空白
 ```javascript
 // jQuery
 $.trim(string)
