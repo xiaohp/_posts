@@ -46,6 +46,15 @@ $el.next()
 el.nextElementSibling
 ```
 
+父元素
+```javascript
+// jQuery
+$el.parent()
+
+// Native
+el.parentNode
+```
+
 Closest 最接近的祖先元素
 ```javascript
 // jQuery
@@ -89,7 +98,6 @@ el.setAttribute('foo', 'bar')
 // jQuery
 $el.data('foo')
 $el.data('foo', value)
-
 
 // Native
 el.dataset['foo']
