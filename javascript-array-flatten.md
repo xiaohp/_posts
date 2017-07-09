@@ -51,7 +51,7 @@ const flatten = list => list.reduce(
 flatten([1, [2, [3, [4]], 5]]) // => [1, 2, [3, [4]], 5]
 ```
 
-方法四 利用数组的 `concat` 方法
+方法四 利用 ES6 的扩展符号 `...` 方法
 ```javascript
 var flatten = function(array) {
     return Array.prototype.concat(...array)
