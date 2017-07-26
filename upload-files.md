@@ -95,3 +95,7 @@ var preview = function(file) {
 
 bind_evetns()
 ```
+
+参考链接：
+[FormData](https://developer.mozilla.org/zh-CN/docs/Web/API/FormData)
+[FormData 对象的使用](https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)
