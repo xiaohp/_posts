@@ -15,6 +15,8 @@ tags:
 var log = function() {
     console.log.apply(console, arguments)
 }
+
+// var log = console.log.bind(console)
 ```
 
 利用 typeof 来检查一个没有声明的变量，而不报错。

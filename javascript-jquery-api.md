@@ -17,6 +17,7 @@ var e = function(selector) {
 var es = function(selector) {
     return document.querySelectorAll(selector)
 }
+
 ```
 查找 element 的所有子元素
 
@@ -31,6 +32,13 @@ var find = function(element, selector) {
 ```javascript
 var appendHtml = function(element, html) {
 	element.insertAdjacentHTML('beforeend', html)
+}
+```
+添加 HTML 到指定元素开头
+
+```javascript
+var prependHtml = function(element, html) {
+	element.insertAdjacentHTML('afterbegin', html)
 }
 ```
 
@@ -117,7 +125,7 @@ var hide = function(element) {
 设置元素内容
 ```javascript
 var setText = function(element, text) {
-    element.innerText = text
+    element.textContent = text
 }
 var setHtml = function(element, html) {
     element.innerHtml = html
