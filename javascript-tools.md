@@ -88,6 +88,14 @@ function unique (arr) {
 }
 ```
 
+利用 JSON 深度复制对象
+对象和数组为引用类型，不能直接赋值
+```javascript
+function copy_object (obj) {
+    return JSON.parse(JSON.stringify(obj))
+}
+```
+
 ## 踩坑记录
 
 1. Array.prototype.includes() 在360浏览器中不兼容，查询后需要47以上版本的chrome才支持
