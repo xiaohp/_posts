@@ -1,13 +1,12 @@
 ---
-title: Javascript 常用函数封装
-date: 2017-03-16 14:10:29
+title: Javascript 工具函数封装
+date: 2017-02-20 14:10:29
 categories: 笔记本
 toc: true
 tags:
   - Javascript
+  - jQuery
 ---
-
-
 
 自定义 `log` 函数
 
@@ -19,96 +18,159 @@ var log = function() {
 // var log = console.log.bind(console)
 ```
 
-利用 `typeof` 来检查一个没有声明的变量，而不报错。
+
+选择器封装，类似 jQuery 中的 $
 
 ```javascript
-// 错误的写法
-if (v) {
-  // ...
+var e = function(selector) {
+    return document.querySelector(selector)
 }
-// ReferenceError: v is not defined
+var es = function(selector) {
+    return document.querySelectorAll(selector)
+}
 
-// 正确的写法
-if (typeof v === "undefined") {
-  // ...
+```
+查找 element 的所有子元素
+
+```javascript
+var find = function(element, selector) {
+    return element.querySelector(selector)
+}
+// 在原生对象上部署此方法
+// Element.prototype.find = Element.prototype.querySelector
+```
+
+添加 HTML 到指定元素后面
+
+```javascript
+var appendHtml = function(element, html) {
+	element.insertAdjacentHTML('beforeend', html)
+}
+```
+添加 HTML 到指定元素开头
+
+```javascript
+var prependHtml = function(element, html) {
+	element.insertAdjacentHTML('afterbegin', html)
 }
 ```
 
-利用 `window` 对象的属性来检查全局变量是否声明
+绑定事件
 
 ```javascript
-if ('a' in window) {
-  // 变量 a 声明过
-} else {
-  // 变量 a 未声明
+var bindEvent = function(element, eventName, callback) {
+    element.addEventListener(eventName, callback)
 }
+// 在原生对象上部署此方法
+// Element.prototype.on = Element.prototype.addEventListener
 ```
-
-利用 `setTimeout` 实现异步
+给多个元素绑定事件
 
 ```javascript
-var a = function () {
-    console.log('begin')
-    setTimeout(function () {
-        console.log('function 1')
-    }, 0)
-    setTimeout(function () {
-        console.log('function 2')
-    }, 0)
-    console.log('end')
-}
-
-a()
-
-// begin
-// end
-// function 1
-// function 2
-```
-
-利用 `Object` 的 `key` 不重复特性给数组去重
-
-```javascript
-var deduplication = function (list) {
-    var o ={}
-    for (let l of list) {
-        o[l] = 1
+var bindAll = function(selector, eventName, callback) {
+    var elements = document.querySelectorAll(selector)
+    for(var i = 0; i < elements.length; i++) {
+        var e = elements[i]
+        bindEvent(e, eventName, callback)
     }
-    return Object.keys(o)
-}
-var a = [1, 2, 2, 5, 2, 1]
-
-deduplication(a)
-// [1, 2, 5]
-```
-
-利用 `ES6` 的 `set` 进行数组去重
-
-```javascript
-function unique (arr) {
-  return Array.from(new Set(arr))
 }
 ```
 
-利用 `JSON` 深度复制对象
-对象和数组为引用类型，不能直接赋值
+添加 class
+
 ```javascript
-function copy_object (obj) {
-    return JSON.parse(JSON.stringify(obj))
+var addClass = function(element, className) {
+    element.classList.add(className)
+}
+```
+删除 class
+
+```javascript
+var removeClass = function(element, className) {
+    element.classList.remove(className)
+}
+```
+切换 class
+
+```javascript
+var toggleClass = function(element, className) {
+    if (element.classList.contains(className)) {
+        element.classList.remove(className)
+    } else {
+        element.classList.add(className)
+    }
 }
 ```
 
-设置 `iframe` 内容为指定 `HTML` 字符串
+删除拥有某个 class 的所有元素
+
 ```javascript
-var iframe = document.querySelector('#iframe')
-// 方法一
-iframe.contentWindow.document.write(data.html)
-// 方法二
-iframe.src = "data:text/html;charset=utf-8," + escape(data.html)
+var removeClassAll = function(className) {
+    var selector = '.' + className
+    var elements = document.querySelectorAll(selector)
+    for (var i = 0; i < elements.length; i++) {
+        var e = elements[i]
+        e.classList.remove(className)
+    }
+}
 ```
 
-## 踩坑记录
+批量删除元素
 
-1. Array.prototype.includes() 在360浏览器中不兼容，查询后需要47以上版本的chrome才支持。`String` 和 `Array`的`includes`方法，是 ES6 加入的内容。
-2. 通过代码添加的自定义 data 不会在开发者工具中显示
-3. jQuery 获取自定义 data, 如果是数字会自动转成 Number
+```javascript
+var removeAll = function(selector) {
+    var tags = document.querySelectorAll(selector)
+    for (var i = 0; i < tags.length; i++) {
+        var tag = tags[i]
+        tag.remove()
+    }
+}
+```
+
+切换元素显示和隐藏
+```javascript
+var show = function(element) {
+    element.classList.add('hide')
+}
+var hide = function(element) {
+    element.classList.remove('hide')
+}
+```
+
+设置元素内容
+```javascript
+var setText = function(element, text) {
+    element.textContent = text
+}
+var setHtml = function(element, html) {
+    element.innerHTML = html
+}
+var setValue = function(element, value) {
+    element.value = value
+}
+```
+
+自定义属性操作
+```javascript
+// 获取自定义属性
+var getData = function(element, property) {
+    return element.dataset.property
+}
+var setData = function(element, property, value) {
+    element.dataset.property = value
+}
+```
+AJAX
+```javascript
+var ajax = function(method, path, data, reseponseCallback) {
+    var r = new XMLHttpRequest()
+    r.open(method, path, true)
+    r.setRequestHeader('Content-Type', 'application/json')
+    r.onreadystatechange = function() {
+        if(r.readyState === 4) {
+            reseponseCallback(r)
+        }
+    }
+    r.send(data)
+}
+```
