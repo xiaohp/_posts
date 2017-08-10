@@ -31,6 +31,8 @@ $el.find('li')
 el.querySelectorAll('li')
 ```
 
+<!-- more -->
+
 前后元素
 ```javascript
 // jQuery

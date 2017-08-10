@@ -21,6 +21,8 @@ tags:
 </form>
 ```
 
+<!-- more -->
+
 如果是上传图片，可以先在本地预览
 
 ```javascript

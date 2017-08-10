@@ -17,6 +17,8 @@ tags:
 
 禅道对新手不太友好，印象笔记多人协作不方便，Excel 的更改不能实时共享（如今有了 Office Online），Google 和 iCloud 访问速度慢。
 
+<!-- more -->
+
 当时开发团队将近 10 人，任务越来越多，对迭代速度有更高的要求，需要一个项目管理软件进行信息共享。在14年看到纯银推荐的 Tower，已经用了一段时间，推荐之。后端开发小哥推荐了 Teambition，调研了类似工具，决定在 Tower、Teambition、Worktile 中三选一投票。因为 Tower 没有任务看板（15年7月9日才推出），开发一致表示选择 Teambition。
 
 ### 经过

@@ -19,6 +19,8 @@ $ cd app-demo
 $ npm init -y
 ```
 
+<!-- more -->
+
 添加依赖
 ```shell
 $ npm install gulp --save
