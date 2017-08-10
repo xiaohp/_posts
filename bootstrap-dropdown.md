@@ -17,7 +17,7 @@ tags:
 ![浏览器图](http://oih6hf7qs.bkt.clouddn.com/blog/20170810-164849596.png)
 
 官方文档只提供了向下展开的方法，没有向上展开的选项。
-查阅信息后发现其实有预留一个接口，通过添加 `dropup` 的class来实现。
+查阅信息后发现其实有预留一个接口，通过添加 `dropup` 的 `class `来实现。
 HTML代码如下
 
 ```html
@@ -85,9 +85,9 @@ $(document).ready(function() {
 ```
 
 由于用到下拉菜单的页面可能比较多，若在每次AJAX请求结束后进行检测，需要修改很多地方。这里是采用事件委托的方式，每次鼠标进入菜单进行检测。
-
-![页面效果预览](http://oih6hf7qs.bkt.clouddn.com/blog/20170810-164936046.png)
+- [点击查看效果](http://xiaohaiping.cc/Practice-Demos/Bootstrap-dropdown-list/index.html)
+![页面效果](http://oih6hf7qs.bkt.clouddn.com/blog/20170810-164936046.png)
 
 参考链接：
-[Bootstrap 官方文档](http://getbootstrap.com/javascript/#dropdowns)
-[stackoverflow](https://stackoverflow.com/questions/32746598/bootstrap-dropdown-list-position-up-bottom-based-on-document-height)
+- [Bootstrap 官方文档](http://getbootstrap.com/javascript/#dropdowns)
+- [stackoverflow](https://stackoverflow.com/questions/32746598/bootstrap-dropdown-list-position-up-bottom-based-on-document-height)
