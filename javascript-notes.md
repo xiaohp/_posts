@@ -67,10 +67,10 @@ a()
 利用 `Object` 的 `key` 不重复特性给数组去重
 
 ```javascript
-var deduplication = function (list) {
+var deduplication = function(array) {
     var o ={}
-    for (let l of list) {
-        o[l] = 1
+    for (let a of array) {
+        o[a] = 1
     }
     return Object.keys(o)
 }
@@ -83,24 +83,34 @@ deduplication(a)
 利用 `ES6` 的 `set` 进行数组去重
 
 ```javascript
-function unique (arr) {
-  return Array.from(new Set(arr))
+// 方法一
+var unique = function(array) {
+  return Array.from(new Set(array))
+}
+// 方法二
+var unique = function(array) {
+  return [...new Set(array)]
 }
 ```
 
 利用 `JSON` 深度复制对象
 对象和数组为引用类型，不能直接赋值
+
 ```javascript
-function copy_object (obj) {
+var copy_object = function(obj) {
     return JSON.parse(JSON.stringify(obj))
 }
 ```
 
 设置 `iframe` 内容为指定 `HTML` 字符串
+
 ```javascript
 var iframe = document.querySelector('#iframe')
 // 方法一
 iframe.contentWindow.document.write(data.html)
+// 此方法为叠加的方式，若需要刷新，则需要在之前运行
+// iframe.src = "about:blank"
+
 // 方法二
 iframe.src = "data:text/html;charset=utf-8," + escape(data.html)
 ```
@@ -109,4 +119,4 @@ iframe.src = "data:text/html;charset=utf-8," + escape(data.html)
 
 1. Array.prototype.includes() 在360浏览器中不兼容，查询后需要47以上版本的chrome才支持。`String` 和 `Array`的`includes`方法，是 ES6 加入的内容。
 2. 通过代码添加的自定义 data 不会在开发者工具中显示
-3. jQuery 获取自定义 data, 如果是数字会自动转成 Number
+3. jQuery 获取元素自定义 data, 如果是数字会自动转成 Number
