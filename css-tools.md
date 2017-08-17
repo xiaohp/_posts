@@ -26,6 +26,7 @@ CSS3 generator:
 
 
 ## 垂直居中
+
 ```css
 .vertical-center {
     position: absolute;;
@@ -48,7 +49,6 @@ block 元素：
     left: 50%;
     transform: translateX(-50%);
 }
-
 ```
 
 inline-block 和 inline 元素设置父元素的 text-align
@@ -57,7 +57,6 @@ inline-block 和 inline 元素设置父元素的 text-align
 .container {
     text-align: center;
 }
-
 ```
 
 ## 消除 inline-block 元素之间的间隙
@@ -70,15 +69,39 @@ inline-block 和 inline 元素设置父元素的 text-align
 
 ## margin 的缩写
 有4 2 3个值时对应关系，padding 类似
-```
-margin: top  right  bottom  left
-margin: (top/bottom)  (right/left)
-margin: top  (right/left)  bottom
+```css
+div {
+    margin: top  right  bottom  left
+    margin: (top/bottom)  (right/left)
+    margin: top  (right/left)  bottom
+}
 ```
 备注：元素之间的 margin 会重叠
 
 ## 圆形头像
+```css
+.portrait {
+    border-radius: 50%;
+}
 ```
-border-radius: 50%;
+
+## 文本溢出显示省略号
+单行文本
+```css
+.text {
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+```
+
+多行文本在最后一行溢出显示省略号
+```css
+.text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
 ```
 备注： outline 属性与 border 类似，但是不改变页面布局，仅作查看效果。
