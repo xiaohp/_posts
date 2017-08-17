@@ -7,7 +7,7 @@ tags:
   - Javascript
 ---
 
-自定义 `log` 函数
+自定义 `log` 函数，可以方便的进行调试
 
 ```javascript
 var log = function() {
@@ -31,6 +31,8 @@ if (typeof v === "undefined") {
   // ...
 }
 ```
+
+<!-- more -->
 
 利用 `window` 对象的属性来检查全局变量是否声明
 

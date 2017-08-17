@@ -12,6 +12,8 @@ tags:
 
 ![问题图](http://oih6hf7qs.bkt.clouddn.com/blog/20170810-164757127.png)
 
+<!-- more -->
+
 比较理想的做法是类似浏览器中的右键菜单，根据不同位置实现不同的展开方向。
 
 ![浏览器图](http://oih6hf7qs.bkt.clouddn.com/blog/20170810-164849596.png)

@@ -30,6 +30,8 @@ $ hexo server -p 5000
 
 ```
 
+<!-- more -->
+
 更多信息: [Server](https://hexo.io/docs/server.html)
 
 ### 生成静态文件

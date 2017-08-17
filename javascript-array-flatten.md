@@ -30,6 +30,8 @@ var flatten = function(array) {
 flatten([1, [2, [3, [4]], 5]]) // => [1, 2, [3, [4]], 5]
 ```
 
+<!-- more -->
+
 方法二 利用数组的 `reduce` 方法
 ```javascript
 var flatten = function(array) {

@@ -24,6 +24,7 @@ CSS3 generator:
 2. http://css3generator.com/
 3. http://css3.me/
 
+<!-- more -->
 
 ## 垂直居中
 

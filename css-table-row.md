@@ -10,6 +10,9 @@ tags:
 ![](http://oih6hf7qs.bkt.clouddn.com/17-3-3/72338246-file_1488500455600_6b2a.jpg)
 里面的表单分为左右两块，以中间为分割，左边靠右对齐，右边靠左对齐。
 使用 table-row 可以方便的实现。
+
+<!-- more -->
+
 HTML代码
 ```html
 <form class="" action="index.html" method="post">

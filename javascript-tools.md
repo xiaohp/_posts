@@ -30,6 +30,9 @@ var es = function(selector) {
 }
 
 ```
+
+<!-- more -->
+
 查找 element 的所有子元素
 
 ```javascript
