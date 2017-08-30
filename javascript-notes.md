@@ -87,11 +87,11 @@ deduplication(a)
 ```javascript
 // 方法一
 var unique = function(array) {
-  return Array.from(new Set(array))
+    return Array.from(new Set(array))
 }
 // 方法二
 var unique = function(array) {
-  return [...new Set(array)]
+    return [...new Set(array)]
 }
 ```
 
@@ -108,6 +108,7 @@ var copy_object = function(obj) {
 
 ```javascript
 var iframe = document.querySelector('#iframe')
+
 // 方法一
 iframe.contentWindow.document.write(data.html)
 // 此方法为叠加的方式，若需要刷新，则需要在之前运行
@@ -121,6 +122,7 @@ iframe.src = "data:text/html;charset=utf-8," + escape(data.html)
 
 在 `AJAX` 之前调用 `window.open` 并保存该窗口
 在回调函数中设置该窗口的 `location` 属性
+
 ```javascript
 var newWindow = window.open()
 newWindow.location = url
