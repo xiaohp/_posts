@@ -117,6 +117,15 @@ iframe.contentWindow.document.write(data.html)
 iframe.src = "data:text/html;charset=utf-8," + escape(data.html)
 ```
 
+`window.open` 打开的窗口被浏览器后屏蔽的解决方案
+
+在 `AJAX` 之前调用 `window.open` 并保存该窗口
+在回调函数中设置该窗口的 `location` 属性
+```javascript
+var newWindow = window.open()
+newWindow.location = url
+```
+
 ## 踩坑记录
 
 1. Array.prototype.includes() 在360浏览器中不兼容，查询后需要47以上版本的chrome才支持。`String` 和 `Array`的`includes`方法，是 ES6 加入的内容。
