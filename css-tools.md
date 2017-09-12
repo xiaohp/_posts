@@ -96,13 +96,22 @@ div {
 }
 ```
 
-多行文本在最后一行溢出显示省略号
+## 多行文本在最后一行溢出显示省略号
 ```css
 .text {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
+}
+```
+
+## CSS 阴影效果被挡住问题
+```css
+.shadow {
+    position: relative;
+    box-shadow: 0 0 20px 0px #000000;
+    z-index: 2;
 }
 ```
 备注： outline 属性与 border 类似，但是不改变页面布局，仅作查看效果。
