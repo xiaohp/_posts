@@ -34,6 +34,11 @@ CSS3 generator:
     top: 50%;
     transform: translateY(-50%);
 }
+/*flex */
+.container {
+    display: flex;
+    align-items: center;
+}
 ```
 
 ## 水平居中
@@ -50,6 +55,12 @@ block 元素：
     left: 50%;
     transform: translateX(-50%);
 }
+/*flex*/
+.container {
+    display: flex;
+    justify-content: center;
+}
+
 ```
 
 inline-block 和 inline 元素设置父元素的 text-align
@@ -72,9 +83,9 @@ inline-block 和 inline 元素设置父元素的 text-align
 有4 2 3个值时对应关系，padding 类似
 ```css
 div {
-    margin: top  right  bottom  left
-    margin: (top/bottom)  (right/left)
-    margin: top  (right/left)  bottom
+    margin: top  right  bottom  left;
+    margin: (top/bottom)  (right/left);
+    margin: top  (right/left)  bottom;
 }
 ```
 备注：元素之间的 margin 会重叠
