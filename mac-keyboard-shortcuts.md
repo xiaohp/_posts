@@ -31,7 +31,7 @@ tags:
 `option + command + esc` 打开强制退出应用程序界面
 
 `command + space` 切换输入法
-`shift` 输入法中英文切换
+`shift` 切换输入法中英文
 
 ## 文本操作 ##
 
@@ -66,7 +66,7 @@ tags:
 ## Finder ##
 `command + O` 打开文件
 `return` 重命名
-`space` 空格预览
+`space` 预览文件
 `command + delete` 删除（移到废纸篓）
 `shift + command + delete` 清倒废纸篓
 
@@ -77,7 +77,7 @@ tags:
 ## Chrome ##
 `command + R` 刷新当前页面
 `command + option + I` 打开开发者工具
-`command + Y` 历史记录
+`command + Y` 打开历史记录
 `command + T` 打开新标签页
 
 参考链接：
