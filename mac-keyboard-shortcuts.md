@@ -17,6 +17,8 @@ tags:
 `shift` ⇧
 `fn`
 
+<!-- more -->
+
 ## 全局快捷键 ##
 `control + space` 打开Spotlight
 `command + tab` 快速切换程序
