@@ -59,6 +59,11 @@ tags:
 `control + D` 删除光标右边一个字符
 `control + K` 删除光标到行尾所有内容
 
+`command + return` 在当前行后插入一行；光标移到该行
+`commend + shift + return` 在当前行后插入一行，光标移到该行
+
+`option + delete` 删除光标左边一个单词
+
 ## 翻页 ##
 `fn + up` PageUp
 `fn + down` PageDown
@@ -84,3 +89,5 @@ tags:
 
 参考链接：
 [Mac keyboard shortcuts](https://support.apple.com/en-us/HT201236)
+
+
