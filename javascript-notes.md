@@ -128,6 +128,29 @@ var newWindow = window.open()
 newWindow.location = url
 ```
 
+jQuery AJAX 序列化表单添加参数
+当 AJAX 请求头中的 `Content-Type` 字段设置为 `application/x-www-form-urlencoded; charset=utf-8`时，可以通过
+
+```javascript
+$("#frm").serialize()
+```
+
+的方式序列化数据，传入 AJAX 进行提交。
+这种方法的缺点在于只能提交简单数据，如包含数组则无法直接使用。
+如果需要添加数组数据，需要额外添加：
+
+```javascript
+var data = $("#frm").serialize()
+var other_data = {
+    num_iid: item_array,
+    wireless_index_num_iid: wireless_index_num_iid,
+}
+data = data + '&' + decodeURIComponent($.param(other_data))
+```
+
+
+
+
 ## 踩坑记录
 
 1. Array.prototype.includes() 在360浏览器中不兼容，查询后需要47以上版本的chrome才支持。`String` 和 `Array`的`includes`方法，是 ES6 加入的内容。
