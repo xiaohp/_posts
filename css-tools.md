@@ -125,4 +125,16 @@ div {
     z-index: 2;
 }
 ```
+
+## img map 链接点击时不显示 outline
+HTML
+```html
+<img class="map" src="..." usemap="...">
+```
+CSS
+```css
+img[usemap], map area{
+    outline: none;
+}
+```
 备注： outline 属性与 border 类似，但是不改变页面布局，仅作查看效果。
