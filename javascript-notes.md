@@ -7,7 +7,7 @@ tags:
   - Javascript
 ---
 
-自定义 `log` 函数，可以方便的进行调试
+## 自定义 `log` 函数，可以方便的进行调试
 
 ```javascript
 var log = function() {
@@ -17,7 +17,7 @@ var log = function() {
 // var log = console.log.bind(console)
 ```
 
-利用 `typeof` 来检查一个没有声明的变量，而不报错。
+## 利用 `typeof` 来检查一个没有声明的变量，而不报错。
 
 ```javascript
 // 错误的写法
@@ -34,7 +34,7 @@ if (typeof v === "undefined") {
 
 <!-- more -->
 
-利用 `window` 对象的属性来检查全局变量是否声明
+## 利用 `window` 对象的属性来检查全局变量是否声明
 
 ```javascript
 if ('a' in window) {
@@ -44,7 +44,7 @@ if ('a' in window) {
 }
 ```
 
-利用 `setTimeout` 实现异步
+## 利用 `setTimeout` 实现异步
 
 ```javascript
 var a = function () {
@@ -66,7 +66,7 @@ a()
 // function 2
 ```
 
-利用 `Object` 的 `key` 不重复特性给数组去重
+## 利用 `Object` 的 `key` 不重复特性给数组去重
 
 ```javascript
 var deduplication = function(array) {
@@ -82,7 +82,7 @@ deduplication(a)
 // [1, 2, 5]
 ```
 
-利用 `ES6` 的 `set` 进行数组去重
+## 利用 `ES6` 的 `set` 进行数组去重
 
 ```javascript
 // 方法一
@@ -95,7 +95,7 @@ var unique = function(array) {
 }
 ```
 
-利用 `JSON` 深度复制对象
+## 利用 `JSON` 深度复制对象
 对象和数组为引用类型，不能直接赋值
 
 ```javascript
@@ -104,7 +104,7 @@ var copy_object = function(obj) {
 }
 ```
 
-设置 `iframe` 内容为指定 `HTML` 字符串
+## 设置 `iframe` 内容为指定 `HTML` 字符串
 
 ```javascript
 var iframe = document.querySelector('#iframe')
@@ -118,7 +118,7 @@ iframe.contentWindow.document.write(data.html)
 iframe.src = "data:text/html;charset=utf-8," + escape(data.html)
 ```
 
-`window.open` 打开的窗口被浏览器后屏蔽的解决方案
+## `window.open` 打开的窗口被浏览器后屏蔽的解决方案
 
 在 `AJAX` 之前调用 `window.open` 并保存该窗口
 在回调函数中设置该窗口的 `location` 属性
@@ -128,7 +128,7 @@ var newWindow = window.open()
 newWindow.location = url
 ```
 
-jQuery AJAX 序列化表单添加参数
+## jQuery AJAX 序列化表单添加参数
 当 AJAX 请求头中的 `Content-Type` 字段设置为 `application/x-www-form-urlencoded; charset=utf-8`时，可以通过
 
 ```javascript
@@ -147,8 +147,6 @@ var other_data = {
 }
 data = data + '&' + decodeURIComponent($.param(other_data))
 ```
-
-
 
 
 ## 踩坑记录
