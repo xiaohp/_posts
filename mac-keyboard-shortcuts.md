@@ -87,7 +87,12 @@ tags:
 `command + Y` 打开历史记录
 `command + T` 打开新标签页
 
+## Photoshop(win) ##
+`Ctrl + 数字1` 缩放到 100%
+`Ctrl + 加号+` 放大
+`Ctrl + 减号-` 缩小
+`Alt + 鼠标滚轮` 缩放
+
+
 参考链接：
 [Mac keyboard shortcuts](https://support.apple.com/en-us/HT201236)
-
-
