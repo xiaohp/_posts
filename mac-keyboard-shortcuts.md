@@ -77,6 +77,10 @@ tags:
 `command + delete` 删除（移到废纸篓）
 `shift + command + delete` 清倒废纸篓
 
+## 截图 ##
+`Shift + Command + 4` 移动光标选择区域截图
+`Shift + Command + 4` 按下空格键，光标变成相机，选择窗口截图，带阴影
+
 ## Xcode ##
 `command + R` 运行代码
 `command + /` 注释当前行
