@@ -90,6 +90,7 @@ tags:
 `command + option + I` 打开开发者工具
 `command + Y` 打开历史记录
 `command + T` 打开新标签页
+`command + L` 光标定位到地址栏
 
 ## Photoshop(win) ##
 `Ctrl + 数字1` 缩放到 100%
@@ -100,3 +101,4 @@ tags:
 
 参考链接：
 [Mac keyboard shortcuts](https://support.apple.com/en-us/HT201236)
+[Chrome 键盘快捷键](https://support.google.com/chrome/answer/157179)
