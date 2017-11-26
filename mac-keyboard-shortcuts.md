@@ -85,6 +85,14 @@ tags:
 `command + R` 运行代码
 `command + /` 注释当前行
 
+## Atom ##
+`command + /` 注释选中行
+`command + \` 切换目录
+`command + P` 查找目录文件，回车打开
+
+## WebStorm ##
+`option + command + L` 格式化代码
+
 ## Chrome ##
 `command + R` 刷新当前页面
 `command + option + I` 打开开发者工具
