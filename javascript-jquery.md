@@ -57,13 +57,14 @@ $el.parent()
 el.parentNode
 ```
 
-Closest 最接近的祖先元素
+closest 最接近的祖先元素
 ```javascript
 // jQuery
 $el.closest(selector)
 
 // Native
 el.closest(selector)
+// 原生方法不兼容 IE, chrome 浏览器仅 41 版本以上支持
 ```
 
 ## 获取值和属性操作

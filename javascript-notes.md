@@ -151,6 +151,7 @@ data = data + '&' + decodeURIComponent($.param(other_data))
 
 ## 踩坑记录
 
-1. Array.prototype.includes() 在360浏览器中不兼容，查询后需要47以上版本的chrome才支持。`String` 和 `Array`的`includes`方法，是 ES6 加入的内容。
+1. Array.prototype.includes() 在360浏览器中不兼容，查询后需要47以上版本的chrome才支持。`String` 和 `Array`的`includes`方法，是 ES6 加入的内容
 2. 通过代码添加的自定义 data 不会在开发者工具中显示
 3. jQuery 获取元素自定义 data, 如果是数字会自动转成 Number
+4. Element.closest() 在低版本 chrome 中不兼容。可以使用 jQuery 代替
