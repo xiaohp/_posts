@@ -138,3 +138,11 @@ img[usemap], map area{
 }
 ```
 备注： outline 属性与 border 类似，但是不改变页面布局，仅作查看效果。
+
+
+## 文字和数字混排时强制换行，默认数字会连在一起
+```css
+.content {
+    word-break: break-all;
+}
+```
