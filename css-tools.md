@@ -26,50 +26,82 @@ CSS3 generator:
 
 <!-- more -->
 
-## 垂直居中
-
-```css
-.vertical-center {
-    position: absolute;;
-    top: 50%;
-    transform: translateY(-50%);
-}
-/*flex */
-.container {
-    display: flex;
-    align-items: center;
-}
-```
-
 ## 水平居中
 
-block 元素：
 ```css
+/* block 元素： */
 /* 方法一 */
 .block {
     margin: 0 auto;
+    width: 200px;
 }
+
 /* 方法二 */
 .center {
     position: absolute;;
     left: 50%;
     transform: translateX(-50%);
 }
-/*flex*/
+
+/* 方法三 flex */
 .container {
     display: flex;
     justify-content: center;
 }
 
-```
-
-inline-block 和 inline 元素设置父元素的 text-align
-```css
-
+/* inline-block 和 inline 元素设置父元素的 text-align */
 .container {
     text-align: center;
 }
 ```
+
+
+## 水平垂直居中
+方法一：`absolute`
+CSS
+```css
+.absolute-box {
+    position: relative;
+}
+.absolute-box .content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+```
+HTML
+```html
+<div class="container absolute-box">
+    <div class="content">
+        水平垂直居中
+    </div>
+</div>
+```
+方法二：`flex`
+CSS
+```css
+.container {
+    width: 400px;
+    height: 200px;
+    background-color: #ccc;
+    margin: 20px;
+}
+.flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+```
+HTML
+```html
+<div class="container flex-box">
+    <div class="content">
+        水平垂直居中
+    </div>
+</div>
+```
+
 
 ## 消除 inline-block 元素之间的间隙
 ```css
@@ -89,6 +121,7 @@ div {
 }
 ```
 备注：元素之间的 margin 会重叠
+
 
 ## 圆形头像
 ```css
