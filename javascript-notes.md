@@ -110,9 +110,11 @@ var copy_object = function(obj) {
 var iframe = document.querySelector('#iframe')
 
 // 方法一
+// 此方法为叠加的方式，若需要刷新，则需要在之前设置 src
+iframe.src = "about:blank"
 iframe.contentWindow.document.write(data.html)
-// 此方法为叠加的方式，若需要刷新，则需要在之前运行
-// iframe.src = "about:blank"
+iframe.contentWindow.document.close()
+
 
 // 方法二
 iframe.src = "data:text/html;charset=utf-8," + escape(data.html)
