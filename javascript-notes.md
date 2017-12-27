@@ -112,8 +112,9 @@ var iframe = document.querySelector('#iframe')
 // 此方法为叠加的方式，若需要刷新，则需要在之前设置 src 为空
 iframe.src = "about:blank"
 iframe.contentWindow.document.write(data.html)
-// jQuery 修改内部样式
+// jQuery 修改 iframe 内部样式
 $(iframe).contents().find('body').css('zoom', '0.5')
+// 设置完内容需要关闭，否则一直在 loading
 iframe.contentWindow.document.close()
 ```
 
@@ -131,7 +132,7 @@ newWindow.location = url
 当 AJAX 请求头中的 `Content-Type` 字段设置为 `application/x-www-form-urlencoded; charset=utf-8`时，可以通过
 
 ```javascript
-$("#frm").serialize()
+$("#form").serialize()
 ```
 
 的方式序列化数据，传入 AJAX 进行提交。
@@ -139,7 +140,7 @@ $("#frm").serialize()
 如果需要添加数组数据，需要额外添加：
 
 ```javascript
-var data = $("#frm").serialize()
+var data = $("#form").serialize()
 var other_data = {
     num_iid: item_array,
     wireless_index_num_iid: wireless_index_num_iid,
@@ -162,13 +163,13 @@ $('.update-many').prop('disabled', e => num < 1)
 
 ```
 
-## Node base64 加密与解密：
+## Node.js base64 加密与解密：
 [官方文档](https://nodejs.org/docs/latest/api/buffer.html#buffer_buffers_and_character_encodings)
 ```javascript
-base 64 加密：
+// base 64 加密：
 Buffer.from('hello world', 'ascii').toString('base64')
 
-base 64 解密：
+// base 64 解密：
 Buffer.from('aGVsbG8gd29ybGQ=', 'base64').toString()
 
 ```
