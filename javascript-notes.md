@@ -150,6 +150,32 @@ var other_data = {
 data = data + '&' + decodeURIComponent($.param(other_data))
 ```
 
+## jQuery 表单操作
+
+```javascript
+// 获取单选框的值：
+$('input[name=img-detail]:checked').val()
+
+// 设置单选框选中
+ $('input:radio[name=img-detail]').filter('[value=1]').prop('checked', true)
+
+// 禁用页面按钮，可在 button 使用；
+$('.update-many').prop('disabled', true)
+$('.update-many').prop('disabled', e => num < 1)
+
+```
+
+## Node base64 加密与解密：
+[官方文档](https://nodejs.org/docs/latest/api/buffer.html#buffer_buffers_and_character_encodings)
+```javascript
+base 64 加密：
+Buffer.from('hello world', 'ascii').toString('base64')
+
+base 64 解密：
+Buffer.from('aGVsbG8gd29ybGQ=', 'base64').toString()
+
+```
+
 
 ## 踩坑记录
 
