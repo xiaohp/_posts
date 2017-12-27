@@ -109,15 +109,12 @@ var copy_object = function(obj) {
 ```javascript
 var iframe = document.querySelector('#iframe')
 
-// 方法一
-// 此方法为叠加的方式，若需要刷新，则需要在之前设置 src
+// 此方法为叠加的方式，若需要刷新，则需要在之前设置 src 为空
 iframe.src = "about:blank"
 iframe.contentWindow.document.write(data.html)
+// jQuery 修改内部样式
+$(iframe).contents().find('body').css('zoom', '0.5')
 iframe.contentWindow.document.close()
-
-
-// 方法二
-iframe.src = "data:text/html;charset=utf-8," + escape(data.html)
 ```
 
 ## `window.open` 打开的窗口被浏览器后屏蔽的解决方案
