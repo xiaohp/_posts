@@ -10,12 +10,13 @@ tags:
 
 ## 按键与符号 ##
 `space` 空格键
-`command` ⌘
+`command` ⌘, 对应 win 上的 control 键
 `control` ⌃
 `option` ⌥  alt
 `caps Lock` ⇪
 `shift` ⇧
 `fn`
+`delete` ⌫
 
 <!-- more -->
 
@@ -89,9 +90,15 @@ tags:
 `command + /` 注释选中行
 `command + \` 切换目录
 `command + P` 查找目录文件，回车打开
+`command + 鼠标` 选中多行
+`command + R` 查找函数定义位置
 
 ## WebStorm ##
+适用于 JetBrains 的其他 IDE，如 PyCharm
 `option + command + L` 格式化代码
+`option + 鼠标` 选中多行 鼠标可点击或按住划线。win 下是 `Alt`
+`command + F` 查找
+`command + R` 替换
 
 ## Chrome ##
 `command + R` 刷新当前页面
@@ -101,12 +108,14 @@ tags:
 `command + L` 光标定位到地址栏
 
 ## Photoshop(win) ##
-`Ctrl + 数字1` 缩放到 100%
-`Ctrl + 加号+` 放大
-`Ctrl + 减号-` 缩小
+`Ctrl + 数字 1` 缩放到 100%
+`Ctrl + 加号 +` 放大
+`Ctrl + 减号 -` 缩小
 `Alt + 鼠标滚轮` 缩放
 
 
 参考链接：
 [Mac keyboard shortcuts](https://support.apple.com/en-us/HT201236)
 [Chrome 键盘快捷键](https://support.google.com/chrome/answer/157179)
+[atom-keyboard-shortcuts](https://github.com/nwinkler/atom-keyboard-shortcuts)
+[WebStorm Keyboard Shortcuts By Category](https://www.jetbrains.com/help/webstorm/keyboard-shortcuts-by-category.html)
