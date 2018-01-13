@@ -27,7 +27,7 @@ if (v) {
 // ReferenceError: v is not defined
 
 // 正确的写法
-if (typeof v === "undefined") {
+if (typeof v === 'undefined') {
   // ...
 }
 ```
@@ -70,7 +70,7 @@ a()
 
 ```javascript
 var deduplication = function(array) {
-    var o ={}
+    var o = {}
     for (let a of array) {
         o[a] = 1
     }
@@ -99,7 +99,7 @@ var unique = function(array) {
 对象和数组为引用类型，不能直接赋值
 
 ```javascript
-var copy_object = function(obj) {
+var copyObject = function(obj) {
     return JSON.parse(JSON.stringify(obj))
 }
 ```
