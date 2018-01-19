@@ -174,6 +174,20 @@ Buffer.from('aGVsbG8gd29ybGQ=', 'base64').toString()
 
 ```
 
+## 利用 `storage` 事件来跨页面通信时，只能使用 localStorage
+```javascript
+// 事件监听
+window.addEventListener("storage", function(e) {
+    console.log('event', e)
+})
+// jQuery 的事件需要额外处理
+$(window).on('storage', function(e){
+    console.log('event', e)
+    console.log('originalEvent', e.originalEvent)
+})
+
+```
+
 
 ## 踩坑记录
 
