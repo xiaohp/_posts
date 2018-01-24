@@ -47,6 +47,7 @@ AJAX 方式获取数据有两种方式，可以使用 `form` 表单，也可以�
 
 ```html
 <div>
+    <!-- input 设置 multiple 属性可以上传多个文件 -->
     <input id="upload-file" type="file" name="avatar" required>
     <img src="" alt="" class="preview-img">
     <button id="submit-button">上传</button>
@@ -57,7 +58,7 @@ Javascript
 
 ```javascript
 
-var fd = null
+window.fd = null
 
 var upload = function(form_data) {
     var request = {
@@ -67,26 +68,27 @@ var upload = function(form_data) {
         contentType: false,
         processData: false,
         success: function(r) {
-            log('上传成功', r)
+            console.log('上传成功', r)
         },
         error: function(e) {
-            log('debug e', e)
+            console.log('上传错误', e)
         }
     }
     $.ajax(request)
 }
 
 var bind_evetns = function() {
-    $('#upload-file').on('change', () => {
-        var element = $('#upload-file')
-        var file = element.get(0).files[0]
+    $('#upload-file').on('change', (e) => {
+        // 选择文件后返回的是 FileList 对象
+        var file = e.target.files[0]
+        // 这里是先预览再上传，如果是选择文件后直接上传，FormData 没必要做成全局变量
         preview(file)
-        fd = new FormData()
-        fd.append('avatar', file)
+        window.fd = new FormData()
+        window.fd.append('avatar', file)
     })
 
     $('#submit-button').on('click', (e) => {
-        upload(fd)
+        upload(window.fd)
     })
 }
 
