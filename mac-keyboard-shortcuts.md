@@ -77,6 +77,8 @@ tags:
 `space` 预览文件
 `command + delete` 删除（移到废纸篓）
 `shift + command + delete` 清倒废纸篓
+`shift + command + O` 打开文稿文件夹
+`shift + command + D` 打开桌面文件夹
 
 ## 截图 ##
 `Shift + Command + 4` 移动光标选择区域截图
