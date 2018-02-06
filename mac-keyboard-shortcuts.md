@@ -33,6 +33,8 @@ tags:
 `command + Q` 彻底退出当前程序
 `option + command + esc` 打开强制退出应用程序界面
 
+`control + command + Q` 锁定屏幕
+
 `command + space` 切换输入法
 `shift` 切换输入法中英文
 
