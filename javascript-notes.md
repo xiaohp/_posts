@@ -14,7 +14,7 @@ var log = function() {
     console.log.apply(console, arguments)
 }
 
-// var log = console.log.bind(console)
+// var log = console.log.bind(console, 'debug --')
 ```
 
 ## 利用 `typeof` 来检查一个没有声明的变量，而不报错。
@@ -35,7 +35,7 @@ if (typeof v === 'undefined') {
 <!-- more -->
 
 ## 利用 `window` 对象的属性来检查全局变量是否声明
-
+备注：`var` 和`function`声明的全局变量，是顶层对象的属性。ES6 中，`let`、`const`、`class`声明的全局变量，不属于顶层对象的属性。从 ES6 开始，全局变量将逐步与顶层对象的属性脱钩。
 ```javascript
 if ('a' in window) {
   // 变量 a 声明过
@@ -67,7 +67,7 @@ a()
 ```
 
 ## 利用 `Object` 的 `key` 不重复特性给数组去重
-
+备注：`Object.keys` 的结果不保证顺序，如对顺序有要求，需要使用其他方法
 ```javascript
 var deduplication = function(array) {
     var o = {}
@@ -83,7 +83,7 @@ deduplication(a)
 ```
 
 ## 利用 `ES6` 的 `set` 进行数组去重
-
+备注：若有多个相同的值，会保留第一个
 ```javascript
 // 方法一
 var unique = function(array) {
@@ -93,6 +93,46 @@ var unique = function(array) {
 var unique = function(array) {
     return [...new Set(array)]
 }
+```
+
+## 数组去重，多个相同的值，保留最后一个
+备注：这个需求需要手动处理
+```javascript
+var unique = function(array) {
+    var res = []
+    array.forEach(e => {
+        if (res.includes(e)) {
+            removeElement(res, e)
+        }
+        res.push(e)
+    })
+    return res
+}
+// 辅助函数，根据数组元素删除元素
+var removeElement = function(array, el) {
+    var index = array.indexOf(el)
+    if (index > -1) {
+        array.splice(index, 1)
+    }
+    return array
+}
+// 辅助测试
+var ensure = function(a, b, msg) {
+    if (JSON.stringify(a) !== JSON.stringify(b)) {
+        console.log('test error', `${a} 不等于 ${b}, ${msg}`)
+    } else {
+        console.log('test success', `${msg}`)
+    }
+}
+// 测试函数
+var test = function() {
+    var a = [5, 2, 1, 3, 4, 3, 1]
+    var b = [5, 2, 4, 3, 1]
+    ensure(unique(a), b, 'test unique')
+}
+
+test()
+// test success test unique
 ```
 
 ## 利用 `JSON` 深度复制对象
@@ -191,7 +231,7 @@ $(window).on('storage', function(e){
 
 ## 踩坑记录
 
-1. Array.prototype.includes() 在360浏览器中不兼容，查询后需要47以上版本的chrome才支持。`String` 和 `Array`的`includes`方法，是 ES6 加入的内容
+1. Array.prototype.includes() 在360浏览器中不兼容，需要chrome 版本在 47 以上。`String` 和 `Array`的`includes`方法，是 ES6 加入的内容
 2. 通过代码添加的自定义 data 不会在开发者工具中显示
-3. jQuery 获取元素自定义 data, 如果是数字会自动转成 Number
-4. Element.closest() 在低版本 chrome 中不兼容。可以使用 jQuery 代替
+3. jQuery 获取元素自定义 data, 如果是数字会自动转成 Number, 如果是 `true` 一也会自动转换为布尔值
+4. 原生 DOM 方法 Element.closest() 在低版本 chrome 中不兼容。可以使用 jQuery 代替
