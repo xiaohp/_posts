@@ -359,3 +359,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
     console.log("DOM fully loaded and parsed")
 })
 ```
+
+## API 分析
+在 [jQuery](https://api.jquery.com/jQuery/) 官网上，核心函数 jQuery() 有 9 种用法
+```javascript
+jQuery(selector [, context])
+jQuery(element)
+jQuery(elementArray)
+jQuery(object)
+jQuery(jQuery object)
+jQuery()
+jQuery(html [, ownerDocument])
+jQuery(html, attributes)
+jQuery(callback)
+```
+一个函数如此多的用法，通过参数类型进行判断，显然设计得不好。前 3 个 API 是可以使用的，主要是第一个。
+并不是说提供了那么多的方法我们都需要使用，取其精华，去其糟粕即可。
