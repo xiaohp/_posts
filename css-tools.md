@@ -111,8 +111,9 @@ HTML
 }
 ```
 
+
 ## margin 的缩写
-有4 2 3个值时对应关系，padding 类似
+有2、3、4个值时对应关系，padding 类似
 ```css
 div {
     margin: top  right  bottom  left;
@@ -120,7 +121,7 @@ div {
     margin: top  (right/left)  bottom;
 }
 ```
-备注：元素之间的 margin 会重叠
+备注：块级元素之间的 margin 在垂直方向会重叠，参见 `外边距合并 margin collapsing`
 
 
 ## 圆形头像
@@ -129,6 +130,7 @@ div {
     border-radius: 50%;
 }
 ```
+
 
 ## 文本溢出显示省略号
 单行文本
@@ -140,6 +142,7 @@ div {
 }
 ```
 
+
 ## 多行文本在最后一行溢出显示省略号
 ```css
 .text {
@@ -150,6 +153,7 @@ div {
 }
 ```
 
+
 ## CSS 阴影效果被挡住问题
 ```css
 .shadow {
@@ -158,6 +162,7 @@ div {
     z-index: 2;
 }
 ```
+
 
 ## img map 链接点击时不显示 outline
 HTML
@@ -177,5 +182,22 @@ img[usemap], map area{
 ```css
 .content {
     word-break: break-all;
+
 }
 ```
+
+
+## 外边距合并 margin collapsing
+方向：与当前的渲染方向垂直。比如正常情况下竖直方向会发生，修改 writing-mode 属性更改方向后，改为在水平方向发生。
+仅在 BFC 中发生。display 属性设置为 inline-block 时为 IFC，不会发生外边距合并
+
+
+## BFC 与 IFC 是什么
+FC（Formatting Contexts） 是 W3C 规范中的概念，表示页面中的一块渲染区域，有一套自己的规则决定了子元素如何定位，以及和其他元素的影响。
+CSS 2.1 中规定了 `BFC` 和 `IFC` 两种类型。CSS3 新增了 `GFC` 和 `FFC` 两种类型。
+
+BFC(Block Formatting Contexts) 是竖着排块级盒子的上下文，一个名词。对应 `display: block;`
+
+IFC(Inline Formatting Contexts) 是行内元素排列的上下文。`display: inline-block;`
+GFC(GridLayout Formatting Contexts)对应 `display: grid;`
+FFC(Flex Formatting Contexts) 对应 `display: flex;`
