@@ -26,7 +26,7 @@ tags:
 
 `control + F2` 键盘操作菜单栏
 `control + F3` 键盘操作 Dock
-`F12` Mission Control（自定义） 
+`F12` Mission Control（自定义）
 
 `command + W` 关闭当前窗口
 `command + M` 最小化当前窗口
@@ -97,6 +97,7 @@ tags:
 `command + P` 查找目录文件，回车打开
 `command + 鼠标` 选中多行
 `command + R` 查找函数定义位置
+`command + T` 搜索文件名打开文件
 
 ## WebStorm ##
 适用于 JetBrains 的其他 IDE，如 PyCharm
@@ -104,6 +105,7 @@ tags:
 `option + 鼠标` 选中多行 鼠标可点击或按住划线。win 下是 `Alt`
 `command + F` 查找
 `command + R` 替换
+`shift + command + O` 搜索文件名打开文件
 
 ## Chrome ##
 `command + R` 刷新当前页面
