@@ -27,6 +27,7 @@ tags:
 `control + F2` 键盘操作菜单栏
 `control + F3` 键盘操作 Dock
 `F12` Mission Control（自定义）
+`option + 数字` 切换屏幕
 
 `command + W` 关闭当前窗口
 `command + M` 最小化当前窗口
@@ -47,6 +48,7 @@ tags:
 `command + F` 查找
 `command + A` 全选
 `command + Z` 撤销
+`command + S` 保存
 
 ## 文本编辑与光标移动 ##
 
@@ -106,6 +108,7 @@ tags:
 `command + F` 查找
 `command + R` 替换
 `shift + command + O` 搜索文件名打开文件
+`command + 1` 切换 Project
 
 ## Chrome ##
 `command + R` 刷新当前页面
