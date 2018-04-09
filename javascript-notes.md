@@ -228,6 +228,17 @@ $(window).on('storage', function(e){
 
 ```
 
+## 关闭页面弹出提示
+```javascript
+var confirmTip = true
+$(window).on('beforeunload', e => {
+    if (confirmTip) {
+        event.returnValue = '未保存设置，是否离开页面？'
+    }
+})
+
+```
+
 
 ## 踩坑记录
 
