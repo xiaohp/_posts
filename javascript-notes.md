@@ -162,6 +162,7 @@ iframe.contentWindow.document.close()
 
 在 `AJAX` 之前调用 `window.open` 并保存该窗口
 在回调函数中设置该窗口的 `location` 属性
+如果用户浏览器开启了拦截，则用户点击页面后，1s内打开新窗口有效，1s后会被拦截。所以需要在 ajax 之前打开窗口
 
 ```javascript
 var newWindow = window.open()
