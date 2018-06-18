@@ -6,6 +6,7 @@ toc: true
 tags:
   - linux
   - CLI
+  - macOS
 ---
 
 ## 文件与目录
@@ -21,6 +22,8 @@ cd ../git
 `ls` list 列出目录内容
 选项 `a` 表示 all, 会列出包含隐藏文件
 选项 `l` 表示 long, 会列出目录下文件的更多信息, 包含权限, 用户, 体积等
+
+<!-- more -->
 
 ```bash
 ls -a

@@ -1,13 +1,16 @@
 ---
 title: macOS iTerm2 配置备忘
-date: 2018-04-12 16:40:29
+date: 2018-04-15 16:40:29
 categories: 笔记本
 toc: true
 tags:
   - macOS
   - iTerm2
   - 工具
+  - CLI
 ---
+
+最近在新电脑上配置了 macOS 的开发环境，记录一下 `iTerm2` 的配置过程。
 
 ## 下载安装 iTerm2
 方案一, 在[iTerm2 官网](https://www.iterm2.com/) 下载安装
@@ -25,6 +28,8 @@ brew cask install iterm2
 ```bash
 chsh -s /bin/zs
 ```
+
+<!-- more -->
 
 ### 安装 `oh-my-zsh`
 
