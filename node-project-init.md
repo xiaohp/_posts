@@ -5,7 +5,7 @@ categories: 笔记本
 toc: true
 tags:
   - Javascript
-  - node
+  - Node.js
 ---
 
 新建一个目录

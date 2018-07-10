@@ -5,7 +5,7 @@ categories: 笔记本
 toc: true
 tags:
   - Javascript
-  - jQuery
+  - 工具
 ---
 
 自定义 `log` 函数
