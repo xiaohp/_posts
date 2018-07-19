@@ -57,6 +57,12 @@ cp -R b c
 可以另外安装 [bat](https://github.com/sharkdp/bat) 输出带语法高亮的内容
 `tail` 输出文件里的最后一小部分内容
 
+`tar` 命令可以解压
+```bash
+tar zxvf node_modules.tar.gz -C /home/frontend
+```
+
+
 
 ### 特殊符号
 ~
