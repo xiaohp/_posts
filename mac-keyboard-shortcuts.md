@@ -128,6 +128,7 @@ tags:
 
 参考链接：
 [Mac keyboard shortcuts](https://support.apple.com/en-us/HT201236)
+[如何在 Mac 上拍摄屏幕快照](https://support.apple.com/zh-cn/HT201361)
 [Chrome 键盘快捷键](https://support.google.com/chrome/answer/157179)
 [atom-keyboard-shortcuts](https://github.com/nwinkler/atom-keyboard-shortcuts)
 [WebStorm Keyboard Shortcuts By Category](https://www.jetbrains.com/help/webstorm/keyboard-shortcuts-by-category.html)
