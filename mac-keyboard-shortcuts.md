@@ -87,6 +87,7 @@ tags:
 `shift + command + D` 打开桌面文件夹
 
 ## 截图 ##
+`Shift + Command + 3` 对整个屏幕截图，文件自动保存到桌面
 `Shift + Command + 4` 移动光标选择区域截图
 `Shift + Command + 4` 按下空格键，光标变成相机，选择窗口截图，带阴影
 
