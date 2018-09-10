@@ -125,10 +125,10 @@ vi README.md
 在 macOS 下, 设置系统代理后, 对普通应用有效, 但是终端需要额外设置
 
 ```bash
-export http_proxy="http://127.0.0.1:1080"
-export https_proxy="http://127.0.0.1:1080"
+export http_proxy="http://127.0.0.1:1087"
+export https_proxy="http://127.0.0.1:1087"
 # 使用 shadowsocks
-export ALL_PROXY="socks5://127.0.0.1:1080"
+export ALL_PROXY="socks5://127.0.0.1:1086"
 ```
 
 ## 网络
