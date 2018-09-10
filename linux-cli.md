@@ -131,5 +131,13 @@ export https_proxy="http://127.0.0.1:1080"
 export ALL_PROXY="socks5://127.0.0.1:1080"
 ```
 
+## 网络
+
+telnet 测试网络是否连通
+
+```bash
+telnet 59.37.96.63 80
+```
+
 ## 其他资源
 [explainshell.com](https://explainshell.com/) 这个网站可以查询命令的参数
