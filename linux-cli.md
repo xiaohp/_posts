@@ -133,11 +133,22 @@ export ALL_PROXY="socks5://127.0.0.1:1086"
 
 ## 网络
 
-telnet 测试网络是否连通
+`telnet` 测试网络是否连通
 
 ```bash
 telnet 59.37.96.63 80
 ```
+
+查看本机 ip
+
+```bash
+# 方法一
+ifconfig
+
+# 方法二
+ip addr show
+```
+
 
 ## 其他资源
 [explainshell.com](https://explainshell.com/) 这个网站可以查询命令的参数
