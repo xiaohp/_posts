@@ -53,8 +53,8 @@ tags:
 
 ## 文本编辑与光标移动 ##
 
-`control + F` 移动向右移动
-`control + B` 移动向左移动
+`control + F` 向右移动一个字符
+`control + B` 向左移动一个字符
 `control + P` 移动到上一行
 `control + N` 移动到下一行
 `control + option + F` 向右一个单词
@@ -66,8 +66,8 @@ tags:
 `control + D` 删除光标右边一个字符
 `control + K` 删除光标到行尾所有内容
 
-`command + return` 在当前行后插入一行；光标移到该行
-`commend + shift + return` 在当前行后插入一行，光标移到该行
+`command + return` 在当前行后插入一行, 光标移到该行
+`commend + shift + return` 在当前行后插入一行, 光标移到该行
 
 `option + delete` 删除光标左边一个单词
 
