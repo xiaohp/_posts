@@ -240,6 +240,16 @@ $(window).on('beforeunload', e => {
 
 ```
 
+## iOS new Date 提示 Invalid Date
+```javascript
+var d = new Date('2018-4-22 08:00')
+
+// iOS 不支持这种格式, 可以修改为 2018/4/22 08:00
+var s = '2018-4-22 08:00'
+s = s.replace(/-/g, '/')
+var d = new Date(s)
+```
+
 
 ## 踩坑记录
 
@@ -247,3 +257,4 @@ $(window).on('beforeunload', e => {
 2. 通过代码添加的自定义 data 不会在开发者工具中显示
 3. jQuery 获取元素自定义 data, 如果是数字会自动转成 Number, 如果是 `true` 一也会自动转换为布尔值
 4. 原生 DOM 方法 Element.closest() 在低版本 chrome 中不兼容。可以使用 jQuery 代替
+5. Array.prototype.forEach() 中如果修改元素的值, 原数组不会更改. 这里和 php 不同, php 在 forEach 中, 可以通过`&`引用赋值,从而修改该元素. js 中如果要修改元素,可以使用 map 返回一个新的数组
