@@ -28,7 +28,8 @@ tags:
 `control + F2` 键盘操作菜单栏
 `control + F3` 键盘操作 Dock
 `F12` Mission Control（自定义）
-`option + 数字` 切换屏幕
+`control + 左右方向键` 切换屏幕
+`control + 1` 切换到最左侧屏幕
 
 `command + W` 关闭当前窗口
 `command + M` 最小化当前窗口
