@@ -72,9 +72,9 @@ Atom 会打开 `agnoster.zsh-theme` 这个文件, 把这个文件的内容替换
 点击下载 [solarized](http://ethanschoonover.com/solarized/files/solarized.zip) 并解压缩
 打开 iTerm2 的 `Preferences` 设置
 更换背景
-![](http://oih6hf7qs.bkt.clouddn.com/18-6-18/1740122.jpg)
-![](http://oih6hf7qs.bkt.clouddn.com/18-6-18/30339310.jpg)
+![](/images/article/1740122.jpg)
+![](/images/article/30339310.jpg)
 更换字体
-![](http://oih6hf7qs.bkt.clouddn.com/18-6-18/98871498.jpg)
+![](/images/article/98871498.jpg)
 按 `command + q` 退出再打开.可看到如下效果即设置完成.
-![](http://oih6hf7qs.bkt.clouddn.com/18-6-18/34191125.jpg)
+![](/images/article/34191125.jpg)

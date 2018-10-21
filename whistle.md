@@ -47,17 +47,17 @@ w2 start -p 8080
 2.Chrome 浏览器 Proxy SwitchyOmega 配置
 
 新建情景模式, 选择代理服务器
-![选择代理服务器](http://oih6hf7qs.bkt.clouddn.com/18-6-27/1075711.jpg)
+![选择代理服务器](/images/article/1075711.jpg)
 
 填写 whistle 启动启动时的端口
-![](http://oih6hf7qs.bkt.clouddn.com/18-6-27/48036690.jpg)
+![](/images/article/48036690.jpg)
 
 
 3.查看网络请求
 
 在 http://local.whistlejs.com/#network 监听, 打开其他网页后查看请求
 
-![查看请求效果](http://oih6hf7qs.bkt.clouddn.com/18-9-2/74710244.jpg)
+![查看请求效果](/images/article/74710244.jpg)
 
 ## 使用
 

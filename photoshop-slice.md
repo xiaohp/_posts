@@ -15,15 +15,15 @@ tags:
 
 步骤：
 
-![mark](http://oih6hf7qs.bkt.clouddn.com/blog/20170803-170938793.png)
+![mark](/images/article/20170803-170938793.png)
 
 左侧工具栏找到`切片工具`，进行手动切片。选择`切片选择工具`时自动切片。
 选择切片工具后即可通过鼠标框选图片区域，选择后可以通过鼠标拖动和键盘进行调整。
 
-![mark](http://oih6hf7qs.bkt.clouddn.com/blog/20170803-171251083.png)
+![mark](/images/article/20170803-171251083.png)
 
 选择完成后在`菜单栏`—`文件`中找到`存储为 Web 所用格式`
 
-![mark](http://oih6hf7qs.bkt.clouddn.com/blog/20170803-171333147.png)
+![mark](/images/article/20170803-171333147.png)
 （这里可能需要缩小预览，鼠标选中所有切片，否则可能应用上一次的格式）
 会弹出导出选项，查看配置项后点击存储即可批量输出文件。

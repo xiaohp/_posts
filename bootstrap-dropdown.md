@@ -10,13 +10,13 @@ tags:
 
 `Bootstrap`的下拉菜单有时会用在列表中，若菜单在页面底部，且选项较多时，会产生溢出。
 
-![问题图](http://oih6hf7qs.bkt.clouddn.com/blog/20170810-164757127.png)
+![问题图](/images/article/20170810-164757127.png)
 
 <!-- more -->
 
 比较理想的做法是类似浏览器中的右键菜单，根据不同位置实现不同的展开方向。
 
-![浏览器图](http://oih6hf7qs.bkt.clouddn.com/blog/20170810-164849596.png)
+![浏览器图](/images/article/20170810-164849596.png)
 
 官方文档只提供了向下展开的方法，没有向上展开的选项。
 查阅信息后发现其实有预留一个接口，通过添加 `dropup` 的 `class `来实现。
@@ -88,7 +88,7 @@ $(document).ready(function() {
 
 由于用到下拉菜单的页面可能比较多，若在每次AJAX请求结束后进行检测，需要修改很多地方。这里是采用事件委托的方式，每次鼠标进入菜单进行检测。
 - [点击查看效果](http://xiaohaiping.cc/Practice-Demos/Bootstrap-dropdown-list/index.html)
-![页面效果](http://oih6hf7qs.bkt.clouddn.com/blog/20170810-164936046.png)
+![页面效果](/images/article/20170810-164936046.png)
 
 参考链接：
 - [Bootstrap 官方文档](http://getbootstrap.com/javascript/#dropdowns)
