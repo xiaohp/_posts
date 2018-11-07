@@ -116,6 +116,8 @@ tags:
 ## Chrome ##
 `command + R` 刷新当前页面
 `command + option + I` 打开开发者工具
+`command + option + J` 打开开发者工具中的 console
+`command + option + U` 显示源代码
 `command + Y` 打开历史记录
 `command + T` 打开新标签页
 `command + L` 光标定位到地址栏
