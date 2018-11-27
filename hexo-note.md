@@ -17,7 +17,6 @@ tags:
 $ hexo new "My New Post"
 ```
 
-test
 更多信息: [Writing](https://hexo.io/docs/writing.html)
 
 ### 开启服务器
