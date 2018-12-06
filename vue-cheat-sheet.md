@@ -21,6 +21,9 @@ tags:
 <a v-on:click="doSomething">...</a>
 <a @click="doSomething">...</a>
 
+<!-- class 绑定 -->
+<div v-bind:class="{ active: isActive }"></div>
+
 <!-- 条件渲染 -->
 <div v-if="type === 'A'">
   A
