@@ -242,12 +242,15 @@ $(window).on('beforeunload', e => {
 
 ## iOS new Date 提示 Invalid Date
 ```javascript
-var d = new Date('2018-4-22 08:00')
+var d = new Date('2018-4-22 08:00:00')
 
-// iOS 不支持这种格式, 可以修改为 2018/4/22 08:00
-var s = '2018-4-22 08:00'
+// iOS 不支持这种格式, 可以修改为 2018/4/22 08:00:00
+var s = '2018-4-22 08:00:00'
 s = s.replace(/-/g, '/')
 var d = new Date(s)
+
+// 或直接使用
+var d = new Date('2018/4/22 08:00:00')
 ```
 
 
