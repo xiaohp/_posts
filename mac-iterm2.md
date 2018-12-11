@@ -78,3 +78,11 @@ Atom 会打开 `agnoster.zsh-theme` 这个文件, 把这个文件的内容替换
 ![](/images/article/98871498.jpg)
 按 `command + q` 退出再打开.可看到如下效果即设置完成.
 ![](/images/article/34191125.jpg)
+
+### 隐藏用户名
+
+在 `~/.zshrc` 添加默认用户名
+
+```bash
+DEFAULT_USER="你的用户名"     #增加这一项，可以隐藏掉路径前面那串用户名
+```
