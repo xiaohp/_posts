@@ -77,7 +77,7 @@ Atom 会打开 `agnoster.zsh-theme` 这个文件, 把这个文件的内容替换
 更换字体
 ![](/images/article/98871498.jpg)
 按 `command + q` 退出再打开.可看到如下效果即设置完成.
-![](/images/article/34191125.jpg)
+![](/images/article/34191125.png)
 
 ### 隐藏用户名
 

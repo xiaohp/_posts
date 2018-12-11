@@ -16,6 +16,9 @@ tags:
 - 手机通过数据线连接电脑, 确保安装驱动程序
 - chrome 打开 `chrome://inspect/#devices` 查看设备
 
+<!-- more -->
+
+![配置页面](/images/article/debug-x5.png)
 
 参考资源:
 [远程调试 Android 设备使用入门](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/?hl=zh-cn)
