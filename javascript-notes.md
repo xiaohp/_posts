@@ -229,7 +229,7 @@ $(window).on('storage', function(e){
 
 ```
 
-## 关闭页面弹出提示
+## 关闭页面时弹出提示
 ```javascript
 var confirmTip = true
 $(window).on('beforeunload', e => {
@@ -251,6 +251,27 @@ var d = new Date(s)
 
 // 或直接使用
 var d = new Date('2018/4/22 08:00:00')
+```
+
+## 文本换行
+
+可以使用 html 中的 <br> 标签，或者使用 CSS 中的 `white-space: pre-line;` 显示内容原有空行。
+```html
+<style>
+    #test {
+        white-space: pre-line;
+    }
+</style>
+
+<div id="test">
+
+</div>
+```
+
+js 设置内容
+```javascript
+let e = document.querySelector('#test')
+e.textContent = '你好\n世界'
 ```
 
 
