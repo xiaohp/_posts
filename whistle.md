@@ -61,7 +61,7 @@ w2 start -p 8080
 
 ## 使用
 
-配置常用规则
+### 配置常用规则
 
 ```bash
 # 转发请求
@@ -76,8 +76,21 @@ so.com/test.json file:///Users/haipingxiao/test.json
 
 ```
 
-https 抓包的需要点击顶部 `HTTPS` 安装证书后使用.
+### HTTPS
 
+https 的抓包需要安装证书后使用.
+点击顶部 Help-HTTPS 可以查看安装说明, 在安卓端安装证书遇到的坑:
+Q:连上代理后无法访问地址 `rootca.pro`
+A:使用 ip 地址连接, 配置 `rootca.pro` 的代理
+
+Q:系统自带浏览器无法下载
+A:使用 chrome
+
+Q:下载证书后无法安装
+A:在系统自带的文件管理器中,找到证书文件手动安装
+
+### 导入 `fiddler` 的抓包请求
+有时候测试同学会发来一个后缀是 `saz` 的抓包文件, 该文件是通过 fiddler 导出请求. whistle 也支持该格式的导入导出, 使用顶部的 `Import` 和 `Export` 即可.
 
 ## 其他资源
 
