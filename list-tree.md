@@ -1,11 +1,12 @@
 ---
-title: macOS 使用 `tree` 列出文件目录树
+title: macOS 使用 tree 列出文件目录树
 date: 2018-12-29 13:53:29
 categories: 笔记本
 toc: true
 tags:
   - CLI
   - macOS
+  - 工具
 ---
 
 # 效果
@@ -21,6 +22,8 @@ tags:
 ├── TeachYourselfSQL_MySQL.zip
 └── TeachYourselfSQL_SQLite.zip
 ```
+
+<!-- more -->
 
 # 安装
 

@@ -14,6 +14,8 @@ tags:
 <a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a>
 ```
 
+<!-- more -->
+
 这里是为了安全性考虑, 如果没有使用这个属性, 新页面可以通过 `window.opener` 访问当前页面对象, 可以使用 `window.opener.location = newURL` 将当前页面导航到其他地址.
 所以在通过 `a` 标签在新页面打开链接时, 建议都使用 `rel="noopener"` .
 
