@@ -112,7 +112,7 @@ tags:
 `command + R` 替换
 `shift + command + O` 搜索文件名打开文件
 `command + 1` 切换 Project
-`/** 再回车` webstorm 快捷输入多行注释
+`/** 再回车` webstorm 快捷输入多行注释.提前写好参数和返回值,注释中会自动添加
 
 
 ## Chrome ##
