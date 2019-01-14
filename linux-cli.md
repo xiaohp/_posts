@@ -36,6 +36,8 @@ ls -la
 `mv` move 移动文件和重命名文件
 
 ```bash
+# 创建嵌套目录
+mkdir -p a/b/c
 # 如果 b 目录已经存在, 移动文件
 mv a.txt b
 # 重命名文件夹
@@ -47,7 +49,9 @@ mv a.txt /tmp
 `cp` copy 复制指定的文件与目录
 
 ```bash
-# 将 a.txt 复制到 b 目录
+# 复制文件
+cp a.txt b.txt
+# 将 a.txt 复制到 b 目录, 保留文件名
 cp a.txt b
 # 复制目录及其子目录和文件, 使用 -R 选项
 cp -R b c
@@ -80,9 +84,10 @@ grep '促销活动' error_log20180717*
 
 ## 用户
 
-切换用户并进入该用户的 home 目录
-
 ```bash
+# 显示当前用户
+whoami
+# 切换用户并进入该用户的 home 目录
 sudo su - username
 # 仅切换用户, 停留在当前目录
 sudo su username
@@ -101,11 +106,29 @@ passwd username
 `~` 波浪号, 表示用户主目录, 如果当前是 root 用户, 则执行 `cd ~` 会进入`/Users/root` 目录
 `/` 斜杠, 表示根目录
 `.` 一个点, 表示当前目录
+`|` 管道
 `..` 两个点, 表示上一级目录
-`>` 重定向符号, 将命令的输出重定向到文件中
+`>` 重定向符号, 将命令的输出重定向到文件中, 覆盖式
+`>>` 追加式重定向
 
 ```bash
 echo "hello" > a.txt
+```
+
+## 查找相关
+
+`history` 查看历史命令
+`grep` 查找
+
+```bash
+history | grep touch
+```
+
+`ps` 查看进程
+
+```bash
+# 查看带 node 字符串的进程
+ps ax | grep node
 ```
 
 ## 使用 vi 编辑文件
@@ -151,4 +174,6 @@ ip addr show
 
 
 ## 其他资源
-[explainshell.com](https://explainshell.com/) 这个网站可以查询命令的参数
+[explainshell.com](https://explainshell.com/) 可以查询命令的参数
+[TLDR pages](https://tldr.sh/) 更简洁的帮忙文档
+[bat](https://github.com/sharkdp/bat) 代码高亮版 `cat`
