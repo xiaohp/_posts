@@ -41,6 +41,7 @@ tags:
 
 `command + space` 切换输入法
 `shift` 切换输入法中英文
+`shift + 普通鼠标滚轮` 横向滚动
 
 ## 文本操作 ##
 
