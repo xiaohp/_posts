@@ -172,6 +172,23 @@ ifconfig
 ip addr show
 ```
 
+## 进程
+查看端口号占用
+```bash
+# 可能需要 sudo
+lsof -i:8080
+# COMMAND   PID USER   FD   TYPE   DEVICE SIZE/OFF NODE NAME
+# node    30246 root   11y  IPv6 12345678      0t0  TCP *:8080 (LISTEN)
+```
+
+结束进程
+```bash
+# 可能需要 sudo, PID 在上一步得到
+kill -9 PID
+# kill -9 26993
+```
+
+
 
 ## 其他资源
 [explainshell.com](https://explainshell.com/) 可以查询命令的参数
