@@ -1,5 +1,5 @@
 ---
-title:  Head First HTML 与 CSS 笔记
+title: Head First HTML 与 CSS 笔记
 date: 2016-06-06 20:05:29
 categories: 笔记本
 toc: true
