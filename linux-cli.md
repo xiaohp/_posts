@@ -82,6 +82,17 @@ grep '促销活动' error_log20180717004
 grep '促销活动' error_log20180717*
 ```
 
+`open` macOS 下打开文件或目录
+
+```bash
+# 打开当前目录
+open .
+# 打开指定目录
+open ~/Documents
+# 打开指定文件(使用关联的应用)
+open a.txt
+```
+
 ## 用户
 
 ```bash
