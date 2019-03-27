@@ -199,6 +199,14 @@ kill -9 PID
 # kill -9 26993
 ```
 
+## 其他
+
+adb 安装 apk, 文件路径可以通过把 apk 拖动到终端中来生成.
+```bash
+adb install -r /Users/fredxiao/Desktop/app-debug.apk
+```
+
+
 
 
 ## 其他资源
