@@ -183,6 +183,57 @@ ifconfig
 ip addr show
 ```
 
+`curl` 查看网址
+
+```bash
+curl google.com
+
+# <HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+# <TITLE>301 Moved</TITLE></HEAD><BODY>
+# <H1>301 Moved</H1>
+# The document has moved
+# <A HREF="http://www.google.com/">here</A>.
+# </BODY></HTML>
+
+# -I --head
+# 仅拉取 http 头
+curl -I google.com
+
+# HTTP/1.1 301 Moved Permanently
+# Location: http://www.google.com/
+# Content-Type: text/html; charset=UTF-8
+# Date: Mon, 19 Aug 2019 12:59:01 GMT
+# Expires: Wed, 18 Sep 2019 12:59:01 GMT
+# Cache-Control: public, max-age=2592000
+# Server: gws
+# Content-Length: 219
+# X-XSS-Protection: 0
+# X-Frame-Options: SAMEORIGIN
+
+# -i, --include
+# 在结果中包含 http 头
+curl -i google.com
+
+# HTTP/1.1 301 Moved Permanently
+# Location: http://www.google.com/
+# Content-Type: text/html; charset=UTF-8
+# Date: Mon, 19 Aug 2019 12:58:57 GMT
+# Expires: Wed, 18 Sep 2019 12:58:57 GMT
+# Cache-Control: public, max-age=2592000
+# Server: gws
+# Content-Length: 219
+# X-XSS-Protection: 0
+# X-Frame-Options: SAMEORIGIN
+#
+# <HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+# <TITLE>301 Moved</TITLE></HEAD><BODY>
+# <H1>301 Moved</H1>
+# The document has moved
+# <A HREF="http://www.google.com/">here</A>.
+# </BODY></HTML>
+```
+
+
 ## 进程
 查看端口号占用
 ```bash
