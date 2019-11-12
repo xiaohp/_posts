@@ -19,14 +19,28 @@ docker pull ubuntu
 
 # 列出本机所有镜像
 docker images
+docker image ls
 
+# 删除镜像, 通过 image id
+docker image rm 16508e5c265d
+# 删除镜像, 通过 REPOSITORY:TAG
+docker rmi ubuntu:latest
 ```
 
 ## 启动容器
 
 ```shell
 # 生成容器
+# 启动容器并映射端口
 docker run -d -t -p 8080:5000 --name demo ubuntu:18.04
+# 参数说明
+-d
+-t
+-p
+-i
+
+# 进入容器的终端
+docker exec -it demo bash
 
 # 停止
 docker stop demo
