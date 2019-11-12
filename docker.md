@@ -26,7 +26,7 @@ docker images
 
 ```shell
 # 生成容器
-docker run -d -t -p 8000:5000 --name demo ubuntu:18.04
+docker run -d -t -p 8080:5000 --name demo ubuntu:18.04
 
 # 停止
 docker stop demo
