@@ -34,10 +34,10 @@ docker rmi ubuntu:latest
 # 启动容器并映射端口
 docker run -d -t -p 8080:5000 --name demo ubuntu:18.04
 # 参数说明
--d
--t
--p
--i
+# -d --detach 在后台运行容器，打印容器 id
+# -t --tty 分配一个虚拟 shell
+# -p 端口映射
+# -i --interactive 保持 STDIN 打开
 
 # 进入容器的终端
 docker exec -it demo bash
