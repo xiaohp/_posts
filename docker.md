@@ -54,11 +54,12 @@ docker ps
 # 查看所有容器
 docker ps -a
 
-# 删除停止的容器和运行种的容器
+# 删除停止的容器
 docker rm demo
+# 删除运行中的容器需要 -f force
 docker rm -f demo1
 
-# 在容器种安装软件
+# 在容器中运行命令安装软件
 docker exec demo apt update
 docker exec demo apt -y install python3 pyhon3-pip
 docker exec demo apt pip3 install flask
