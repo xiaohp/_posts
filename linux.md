@@ -18,3 +18,17 @@ man ls
 # 查看指定章节
 man 7 man
 ```
+
+## 常见问题
+中文乱码
+
+```shell
+# 查看使用语言
+echo $LANG
+# 查看语言信息
+locale
+# 安装中文
+yum -y groupinstall "Chinese Support"
+# 切换中文
+LANG="zh_CN.UTF-8"
+```
