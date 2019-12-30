@@ -1,5 +1,5 @@
 ---
-title: Dokcer 笔记
+title: Docker 笔记
 date: 2019-11-11 13:53:29
 categories: 笔记本
 toc: true
@@ -26,7 +26,7 @@ docker image rm 16508e5c265d
 # 删除镜像, 通过 REPOSITORY:TAG
 docker rmi ubuntu:latest
 ```
-
+<!-- more -->
 ## 启动容器
 
 ```shell

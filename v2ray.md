@@ -12,7 +12,7 @@ tags:
 1. 购买机器, 可以使用 [vultr](https://www.vultr.com/?ref=7214221), [linode](https://www.linode.com/)等
 2. 购买域名, 直接在阿里云或者腾讯云购买
 3. 配置域名指向服务器
-
+<!-- more -->
 ## 服务器基础配置
 
 1. 配置开启 BBR
