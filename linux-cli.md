@@ -233,6 +233,15 @@ curl -i google.com
 # </BODY></HTML>
 ```
 
+`wget` 下载文件
+
+```bash
+wget http://example.com/file.iso
+# -m 下载所有文件, 相当于 mirror
+wget -m http://example.com
+
+```
+
 
 ## 进程
 查看端口号占用
