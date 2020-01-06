@@ -242,6 +242,17 @@ wget -m http://example.com
 
 ```
 
+`dig` 解析域名
+
+```bash
+dig baidu.com
+nslookup baidu.com
+
+指定 DNS
+dig @10.10.10.10 baidu.com
+
+```
+
 
 ## 进程
 查看端口号占用
