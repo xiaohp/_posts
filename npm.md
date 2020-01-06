@@ -1,12 +1,15 @@
 ---
-title: node 项目初始化
+title: npm 使用笔记
 date: 2017-05-16 14:10:29
 categories: 笔记本
 toc: true
 tags:
   - Javascript
   - Node.js
+  - npm
 ---
+
+# npm 初始化
 
 新建一个目录
 
@@ -53,5 +56,22 @@ $ npm install
 
 ```shell
 npm run dev
+
+```
+
+# 发布包到 npm
+
+需要提前注册并登录
+
+```shell
+npm publish
+
+```
+
+# 发布 patch 版本
+
+```shell
+tnpm version patch
+运行后 package.json 中的版本号会 +1, 并且打上 tag 推送到远程
 
 ```
