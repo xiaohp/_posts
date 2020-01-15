@@ -9,26 +9,41 @@ tags:
   - macOS
 ---
 
+## 帮助
+
+```shell
+# manual 缩写
+# 查看帮助
+man ls
+# 查看指定章节
+man 7 man
+```
+
+<!-- more -->
+
 ## 文件与目录
 `pwd` print working directory 输出当前所在位置
 `cd` change directory 改变工作目录
 
 ```bash
-cd Desktop
+# 绝对路径
 cd /etc
+# 相对路径
 cd ../git
 ```
 
-`ls` list 列出目录内容
-选项 `a` 表示 all, 会列出包含隐藏文件
-选项 `l` 表示 long, 会列出目录下文件的更多信息, 包含权限, 用户, 体积等
-
-<!-- more -->
+`ls` list 列出目录内容, 后面可以加目录
+`-a` 表示 all, 会列出包含隐藏文件
+`-l` 表示 long, 长格式显示
+`-r` 表示 reverse, 逆序显示
+`-t` 表示 time, 按修改时间顺序显示
+`-R` 表示 Recursively, 递归显示子目录
 
 ```bash
 ls -a
 ls -l
 ls -la
+ls -l /root / 分别列出对应目录
 ```
 
 `mkdir` make directories 创建新目录
@@ -102,6 +117,8 @@ whoami
 sudo su - username
 # 仅切换用户, 停留在当前目录
 sudo su username
+# 切换到 root 用户
+su - root
 ```
 
 root 修改普通用户密码
@@ -277,6 +294,19 @@ adb 安装 apk, 文件路径可以通过把 apk 拖动到终端中来生成.
 adb install -r /Users/fredxiao/Desktop/app-debug.apk
 ```
 
+## 常见问题
+中文乱码
+
+```shell
+# 查看使用语言
+echo $LANG
+# 查看语言信息
+locale
+# 安装中文
+yum -y groupinstall "Chinese Support"
+# 切换中文
+LANG="zh_CN.UTF-8"
+```
 
 
 
