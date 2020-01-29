@@ -7,10 +7,9 @@ tags:
   - Docker
 ---
 
-## 常用命令
+## 镜像常用命令
 
 ```shell
-
 # 搜索镜像
 docker search ubuntu
 
@@ -27,7 +26,7 @@ docker image rm 16508e5c265d
 docker rmi ubuntu:latest
 ```
 <!-- more -->
-## 启动容器
+## 容器常用命令
 
 ```shell
 # 生成容器
@@ -58,7 +57,11 @@ docker ps -a
 docker rm demo
 # 删除运行中的容器需要 -f force
 docker rm -f demo1
+```
 
+## 对容器进行操作
+
+```shell
 # 在容器中运行命令安装软件
 docker exec demo apt update
 docker exec demo apt -y install python3 pyhon3-pip
