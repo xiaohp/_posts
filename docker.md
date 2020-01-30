@@ -77,3 +77,29 @@ docker exec demo apt pip3 install flask
 docker exec demo mkdir /code
 docker cp a.py "demo:/code/a.py"
 ```
+
+## 使用数据卷 volume
+
+```shell
+# 创建 volume
+docker volume create testvolume
+# 列出 volume
+docker volume ls
+# 删除 volume
+docker volume rm testvolume
+
+# 启动容器时挂载数据卷到指定目录
+--mount source=testvolume,target=/volume
+# 例子
+docker run -p 8080:5000 \
+--name demo \
+--mount source=testvolume,target=/volume ubuntu:18.04
+
+# 共享目录
+# 可以挂载文件和目录, 支持多个
+--mount type=bind,source="${PWD}",target=/share
+# 例子
+docker run -p 8080:5000 \
+--name demo \
+--mount type=bind,source="${PWD}",target=/share ubuntu:18.04
+```
