@@ -59,6 +59,12 @@ docker rm demo
 docker rm -f demo1
 ```
 
+## 使用 Dockerfile 构建镜像
+```shell
+# -t 指定镜像名城为 imagename. 最后的点表示工作目录为当前目录
+docker build -t imagename .
+```
+
 ## 对容器进行操作
 
 ```shell
