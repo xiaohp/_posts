@@ -256,7 +256,15 @@ curl -i google.com
 wget http://example.com/file.iso
 # -m 下载所有文件, 相当于 mirror
 wget -m http://example.com
+```
 
+`scp` 传输文件
+
+```bash
+# 上传 app 目录到服务器 /path 目录
+scp -r app username@ip:/path
+# 下载
+scp -r username@ip:/path /home/app
 ```
 
 `dig` 解析域名
@@ -267,7 +275,6 @@ nslookup baidu.com
 
 指定 DNS
 dig @10.10.10.10 baidu.com
-
 ```
 
 
@@ -307,7 +314,6 @@ yum -y groupinstall "Chinese Support"
 # 切换中文
 LANG="zh_CN.UTF-8"
 ```
-
 
 
 ## 其他资源
