@@ -60,6 +60,26 @@ docker rm -f demo1
 ```
 
 ## 使用 Dockerfile 构建镜像
+
+Dockerfile 编写
+
+```
+FROM node:10
+COPY ./ /app
+WORKDIR /app
+RUN npm install && npm run build
+
+FROM nginx
+RUN mkdir /app
+COPY --from=0 /app/dist /app
+COPY nginx.conf /etc/nginx/nginx.conf
+```
+
+这里用到了多阶段构建, 可以将构建环境和运行环境分开, 减小镜像体积, 生成的镜像以最后一条为准
+`COPY` 的 `--from=0` 参数, 从前面阶段拷贝文件到当前阶段
+多个FROM语句时, 0 代表第一个阶段, 除了使用数字, 还可以给阶段命名
+
+构建 Docker 镜像
 ```shell
 # -t 指定镜像名城为 imagename. 最后的点表示工作目录为当前目录
 docker build -t imagename .
