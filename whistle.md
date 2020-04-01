@@ -95,8 +95,10 @@ A:在系统自带的文件管理器中,找到证书文件手动安装
 ## FAQ
 - 安卓端微信最新版7.0 不信任用户证书, 无法抓取 https 的包.(解决方案: 微信端暂时使用 iOS 进行抓包)
 - `localhost` 无法抓包, 需要在 SwitchyOmega 的不代理的地址列表中, 添加 `<-loopback>`
+- Vue CLI 生成的项目, 映射到其他域名, 通过 whistle 转发到本地时报错 `Invalid Host header`, 需要配置 `devServer` 中 `disableHostCheck` 为 `true`. 以关闭 `webpack-dev-server` 的安全验证
 
 ## 其他资源
 
 [官方文档](http://wproxy.org/whistle/)
 [localhost 代理问题](https://github.com/avwo/whistle/issues/266)
+[Vue CLI 出现Invalid Host header的解决方案](https://blog.csdn.net/guzhao593/article/details/85918869)
