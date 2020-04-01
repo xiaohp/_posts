@@ -92,10 +92,11 @@ A:在系统自带的文件管理器中,找到证书文件手动安装
 ### 导入 `fiddler` 的抓包请求
 有时候测试同学会发来一个后缀是 `saz` 的抓包文件, 该文件是通过 fiddler 导出请求. whistle 也支持该格式的导入导出, 使用顶部的 `Import` 和 `Export` 即可.
 
-## 遇到的坑
-
-安卓端微信最新版7.0 不信任用户证书, 无法抓取 https 的包.(解决方案: 微信端暂时使用 iOS 进行抓包)
+## FAQ
+- 安卓端微信最新版7.0 不信任用户证书, 无法抓取 https 的包.(解决方案: 微信端暂时使用 iOS 进行抓包)
+- `localhost` 无法抓包, 需要在 SwitchyOmega 的不代理的地址列表中, 添加 `<-loopback>`
 
 ## 其他资源
 
 [官方文档](http://wproxy.org/whistle/)
+[localhost 代理问题](https://github.com/avwo/whistle/issues/266)
