@@ -171,16 +171,7 @@ vi README.md
 保存并退出 `:wq`
 不保存退出 `:q!`
 
-## 终端走代理
 
-在 macOS 下, 设置系统代理后, 对普通应用有效, 但是终端需要额外设置
-
-```bash
-export http_proxy="http://127.0.0.1:1087"
-export https_proxy="http://127.0.0.1:1087"
-# 使用 shadowsocks
-export ALL_PROXY="socks5://127.0.0.1:1086"
-```
 
 ## 网络
 
